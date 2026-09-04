@@ -1,0 +1,39 @@
+
+<div class="panier-container">
+  <h1>Mon panier</h1>
+
+  @if (panierService.articles().length === 0) {
+    <div class="panier-vide">
+      <p>Ton panier est vide.</p>
+      <a routerLink="/catalogue" class="lien-catalogue">Voir les produits</a>
+    </div>
+  } @else {
+    <div class="liste-articles">
+      @for (article of panierService.articles(); track article.productId) {
+        <div class="ligne-article">
+          <div class="info-article">
+            <h2>{{ article.name }}</h2>
+            <p class="prix-unitaire">{{ article.price }} € / unite</p>
+          </div>
+
+          <div class="controle-quantite">
+            <button (click)="diminuer(article.productId, article.quantity)">-</button>
+            <span>{{ article.quantity }}</span>
+            <button (click)="augmenter(article.productId, article.quantity)">+</button>
+          </div>
+
+        <p class="sous-total">{{ sousTotal(article.price, article.quantity) }} €</p>
+
+          <button class="bouton-supprimer" (click)="supprimer(article.productId)">
+            🗑️
+          </button>
+        </div>
+      }
+    </div>
+
+    <div class="recap-panier">
+      <p class="total">Total : {{ panierService.total() }} €</p>
+            <button class="bouton-commander" (click)="allerAuPaiement()">Passer commande</button>
+    </div>
+  }
+</div>

@@ -1,0 +1,55 @@
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+nav a:hover,
+nav a.lien-actif {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lien-panier {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.badge-panier {
+  background: #d32f2f;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+}
+
+main {
+  min-height: 80vh;
+}

@@ -1,0 +1,39 @@
+<div class="catalogue">
+  <h1>Nos produits</h1>
+
+  @if (messageAjout()) {
+    <div class="message-succes">{{ messageAjout() }}</div>
+  }
+
+  <div class="barre-outils">
+    <input
+      type="text"
+      placeholder="Rechercher un produit..."
+      [(ngModel)]="recherche"
+      class="champ-recherche"
+    />
+
+    <select [(ngModel)]="tri" class="champ-tri">
+      <option value="nom-asc">Nom (A-Z)</option>
+      <option value="nom-desc">Nom (Z-A)</option>
+      <option value="prix-asc">Prix croissant</option>
+      <option value="prix-desc">Prix decroissant</option>
+    </select>
+  </div>
+
+  <div class="grille-produits">
+    @for (produit of produitsAffiches(); track produit.id) {
+      <div class="carte-produit">
+        <div class="image-produit">💻</div>
+        <h2>{{ produit.name }}</h2>
+        <p>{{ produit.description }}</p>
+        <p class="prix">{{ produit.price }} €</p>
+        <button class="bouton-ajouter" (click)="ajouterAuPanier(produit)">
+          Ajouter au panier
+        </button>
+      </div>
+    } @empty {
+      <p>Aucun produit trouve.</p>
+    }
+  </div>
+</div>

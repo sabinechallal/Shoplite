@@ -1,0 +1,83 @@
+<div class="paiement-container">
+  @if (confirmation()) {
+    <div class="carte-confirmation">
+      <div class="icone-succes">✅</div>
+      <h1>Paiement reussi !</h1>
+      <p>Merci pour ta commande. Tu vas etre redirige vers le catalogue...</p>
+    </div>
+  } @else {
+    <h1>Paiement</h1>
+
+    <div class="contenu-paiement">
+      <div class="recap-commande">
+        <h2>Recapitulatif</h2>
+        @for (article of panierService.articles(); track article.productId) {
+          <div class="ligne-recap">
+            <span>{{ article.name }} x{{ article.quantity }}</span>
+            <span>{{ article.price * article.quantity }} €</span>
+          </div>
+        }
+        <div class="ligne-total">
+          <span>Total</span>
+          <span>{{ panierService.total() }} €</span>
+        </div>
+      </div>
+
+      <form class="carte-paiement" (ngSubmit)="payer()">
+        <h2>Informations de la carte</h2>
+
+        <label for="cardName">Nom sur la carte</label>
+        <input
+          id="cardName"
+          type="text"
+          [(ngModel)]="cardName"
+          name="cardName"
+          required
+        />
+
+        <label for="cardNumber">Numero de carte</label>
+        <input
+          id="cardNumber"
+          type="text"
+          placeholder="16 chiffres"
+          [(ngModel)]="cardNumber"
+          name="cardNumber"
+          required
+        />
+
+        <div class="ligne-double">
+          <div>
+            <label for="expiry">Expiration (MM/AA)</label>
+            <input
+              id="expiry"
+              type="text"
+              placeholder="12/28"
+              [(ngModel)]="expiry"
+              name="expiry"
+              required
+            />
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input
+              id="cvv"
+              type="text"
+              placeholder="123"
+              [(ngModel)]="cvv"
+              name="cvv"
+              required
+            />
+          </div>
+        </div>
+
+        @if (erreur()) {
+          <p class="message-erreur">{{ erreur() }}</p>
+        }
+
+        <button type="submit" [disabled]="enCours()">
+          {{ enCours() ? 'Traitement en cours...' : 'Payer ' + panierService.total() + ' €' }}
+        </button>
+      </form>
+    </div>
+  }
+</div>

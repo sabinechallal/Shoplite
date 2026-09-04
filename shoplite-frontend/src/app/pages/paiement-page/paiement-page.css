@@ -1,0 +1,136 @@
+.paiement-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.paiement-container h1 {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.contenu-paiement {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.recap-commande,
+.carte-paiement {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recap-commande h2,
+.carte-paiement h2 {
+  font-size: 1.2rem;
+  color: #1a1a2e;
+  margin: 0 0 1rem 0;
+}
+
+.ligne-recap {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ligne-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+.carte-paiement form,
+.carte-paiement {
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-paiement label {
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 0.3rem;
+  margin-top: 1rem;
+}
+
+.carte-paiement input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.carte-paiement input:focus {
+  outline: none;
+  border-color: #764ba2;
+}
+
+.ligne-double {
+  display: flex;
+  gap: 1rem;
+}
+
+.ligne-double > div {
+  flex: 1;
+}
+
+.message-erreur {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+}
+
+.carte-paiement button {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.carte-paiement button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.carte-paiement button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.carte-confirmation {
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.icone-succes {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.carte-confirmation h1 {
+  color: #155724;
+  margin-bottom: 0.5rem;
+}
+
+.carte-confirmation p {
+  color: #666;
+}

@@ -1,0 +1,17 @@
+<header>
+  <h1>🛒 ShopLite</h1>
+  <nav>
+    <a routerLink="/catalogue" routerLinkActive="lien-actif">Catalogue</a>
+    <a routerLink="/panier" routerLinkActive="lien-actif" class="lien-panier">
+      Panier
+      @if (panierService.nombreArticles() > 0) {
+        <span class="badge-panier">{{ panierService.nombreArticles() }}</span>
+      }
+    </a>
+    <a routerLink="/connexion" routerLinkActive="lien-actif">Connexion</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,129 @@
+services:
+  catalogue-db:
+    image: postgres:16
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: catalogue
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sabine1999
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - catalogue-db-data:/var/lib/postgresql/data
+
+  catalogue-service:
+    build: ./shoplite-catalogue-service
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://catalogue-db:5432/catalogue
+    depends_on:
+      catalogue-db:
+        condition: service_healthy
+
+  auth-db:
+    image: postgres:16
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: auth
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sabine1999
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - auth-db-data:/var/lib/postgresql/data
+
+  auth-service:
+    build: ./shoplite-auth-service
+    ports:
+      - "8084:8084"
+    environment:
+      DATABASE_URL: postgresql://postgres:sabine1999@auth-db:5432/auth?client_encoding=utf8
+    depends_on:
+      auth-db:
+        condition: service_healthy
+
+  commande-db:
+    image: postgres:16
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_DB: commande
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sabine1999
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - commande-db-data:/var/lib/postgresql/data
+
+  commande-service:
+    build: ./shoplite-commande-service
+    ports:
+      - "8082:8082"
+    environment:
+      DATABASE_URL: postgresql://postgres:sabine1999@commande-db:5432/commande
+      CATALOGUE_SERVICE_URL: http://catalogue-service:8081
+      AUTH_SERVICE_URL: http://auth-service:8084
+    depends_on:
+      commande-db:
+        condition: service_healthy
+      catalogue-service:
+        condition: service_started
+      auth-service:
+        condition: service_started
+
+  paiement-db:
+    image: postgres:16
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_DB: paiement
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: sabine1999
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - paiement-db-data:/var/lib/postgresql/data
+
+  paiement-service:
+    build: ./shoplite-paiement-service
+    ports:
+      - "8083:8083"
+    environment:
+      DB_HOST: paiement-db
+      COMMANDE_SERVICE_URL: http://commande-service:8082
+    depends_on:
+      paiement-db:
+        condition: service_healthy
+      commande-service:
+        condition: service_started
+
+  frontend:
+    build: ./shoplite-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - catalogue-service
+      - auth-service
+      - commande-service
+      - paiement-service
+
+volumes:
+  catalogue-db-data:
+  auth-db-data:
+  commande-db-data:
+  paiement-db-data:

@@ -1,0 +1,35 @@
+<div class="connexion-container">
+  <div class="carte-connexion">
+    <h1>Connexion</h1>
+
+    <form (ngSubmit)="seConnecter()">
+      <label for="username">Nom d'utilisateur</label>
+      <input
+        id="username"
+        type="text"
+        [(ngModel)]="username"
+        name="username"
+        required
+      />
+
+      <label for="password">Mot de passe</label>
+      <input
+        id="password"
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        required
+      />
+
+      @if (erreur()) {
+        <p class="message-erreur">{{ erreur() }}</p>
+      }
+
+      <button type="submit">Se connecter</button>
+    </form>
+
+    <p class="lien-connexion">
+      Pas de compte ? <a routerLink="/inscription">S'inscrire</a>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+﻿# Node / Angular
+node_modules/
+dist/
+.angular/
+
+# Java / Maven
+target/
+*.class
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Logs et fichiers de debug
+build-log.txt
+*.log
+
+# Editeurs
+.vscode/
+.idea/
+
+# Systeme
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env

@@ -1,0 +1,132 @@
+.panier-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.panier-container h1 {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.panier-vide {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.panier-vide p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.lien-catalogue {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.liste-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ligne-article {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.info-article {
+  flex: 1;
+}
+
+.info-article h2 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin: 0 0 0.3rem 0;
+}
+
+.prix-unitaire {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.controle-quantite {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.controle-quantite button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.controle-quantite button:hover {
+  background: #f0f0f0;
+}
+
+.sous-total {
+  font-weight: bold;
+  color: #764ba2;
+  min-width: 80px;
+  text-align: right;
+}
+
+.bouton-supprimer {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.recap-panier {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.bouton-commander {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
