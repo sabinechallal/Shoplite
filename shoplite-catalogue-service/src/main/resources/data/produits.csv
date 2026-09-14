@@ -1,54 +1,65 @@
 nom;description;prix;photo;categorie
-Laptop ShopLite Pro 15;Ordinateur portable 15 pouces, Intel Core i7, 16 Go RAM, SSD 512 Go.;899,90;/images/Laptop.jpg;Ordinateurs
+Laptop ShopLite Pro 15;Ordinateur portable 15 pouces, Intel Core i7, 16 Go RAM, SSD 512 Go.;899,90;https://picsum.photos/seed/produit1/400/300;Ordinateurs
 Laptop ShopLite Air 13;Ultrabook 13 pouces, tres leger (1.2kg), autonomie 12h.;749,90;https://picsum.photos/seed/produit2/400/300;Ordinateurs
-PC de bureau ShopLite Tower;Unite centrale, Intel Core i5, 16 Go RAM, SSD 1 To, sans ecran.;649,90;/images/Pc Bureau.jpg;Ordinateurs
-Ecran 24 pouces Full HD;Moniteur 24'', 1920x1080, dalle IPS, 75Hz.;129,90;/images/Ecran PC LG.jpg;Ecrans
-Ecran 27 pouces 4K;Moniteur 27'', UHD 4K, dalle IPS, compatible HDR.;289,90;/images/Ecran Ordinateur  Moniteur PC.jpg;Ecrans
-Ecran incurve 34 pouces;Moniteur ultra-wide incurve, ideal multitache et gaming.;449,90;/images/Écran de Bureau FHD.jpg;Ecrans
-Clavier mecanique RGB;Clavier mecanique retroeclaire RGB, switches bleus, filaire.;74,90;/images/clavier mecanique RGB.jpg;Peripheriques
-Clavier sans fil silencieux;Clavier compact, connexion bluetooth, switches silencieux.;39,90;/images/Clavier sans fil.jpg;Peripheriques
-Souris optique filaire;Souris ergonomique 3 boutons, capteur optique 1600 DPI.;12,90;/images/Mini souris optique USB.jpg;Peripheriques
-Souris sans fil ergonomique;Souris verticale sans fil, reduit la tension du poignet.;29,90;https://picsum.photos/seed/produit10/400/300;Peripheriques
-Souris gamer RGB;Souris gaming 12000 DPI, 7 boutons programmables, RGB.;44,90;/images/Souris Filaire Gamer.jpg;Peripheriques
-Tapis de souris XXL;Tapis de souris grand format 90x40cm, surface anti-derapante.;14,90;/images/Tapis de souris.jpg;Peripheriques
-Webcam Full HD 1080p;Webcam USB 1080p, micro integre, autofocus.;34,90;/images/WEBCAM FULL.jpg;Peripheriques
-Webcam 4K avec trepied;Webcam 4K grand angle, trepied ajustable inclus.;69,90;/images/WEBCAM TRIPIED.webp;Peripheriques
-Casque audio filaire;Casque stereo filaire jack 3.5mm, confortable pour longues sessions.;24,90;/images/Casque Audio Filaire,.jpg;Peripheriques
-Casque sans fil reduction de bruit;Casque bluetooth, reduction de bruit active, autonomie 20h.;89,90;/images/Casque sans fil hybride.jpg;Peripheriques
-Casque gamer surround;Casque gaming son surround 7.1, micro amovible.;59,90;/images/Casque gamer.jpg;Peripheriques
-Microphone USB studio;Microphone a condensateur USB, ideal streaming et podcasts.;79,90;/images/Rode NT-USB+.jpg;Peripheriques
-Enceintes PC 2.0;Paire d'enceintes compactes pour ordinateur, USB/jack.;22,90;/images/MCL HP-2015W.jpg;Peripheriques
-Enceinte bluetooth portable;Enceinte bluetooth étanche, autonomie 10h.;39,90;/images/Enceinte Bluetooth portable.jpg;Peripheriques
-SSD interne 500 Go;Disque SSD SATA 500 Go, vitesses de lecture jusqu'a 550 Mo/s.;44,90;/images/SSD Vs_ HDD.jpg;Stockage
-SSD interne 1 To NVMe;SSD NVMe M.2 1 To, tres haute vitesse pour PC et laptop.;84,90;/images/SSD INTERNE 1 TO.jpg;Stockage
-Disque dur externe 2 To;Disque dur externe USB 3.0, 2 To, compact et portable.;69,90;/images/Disque Dur.jpg;Stockage
-Cle USB 64 Go;Cle USB 3.0 64 Go, format compact.;9,90;/images/Clé Usb 64 Go.jpg;Stockage
-Cle USB 128 Go;Cle USB 3.1 128 Go, transfert rapide.;16,90;/images/Clé USB.jpg;Stockage
-Barrette RAM 8 Go DDR4;Memoire RAM DDR4 8 Go, frequence 3200 MHz.;27,90;/images/Barrette de RAM.jpg;Composants
-Barrette RAM 16 Go DDR4;Memoire RAM DDR4 16 Go, frequence 3200 MHz.;49,90;/images/Bilderthread.jpg;Composants
-Carte graphique milieu de gamme;GPU 8 Go GDDR6, ideal gaming Full HD/1440p.;349,90;/images/Clasken Carte Graphique.jpg;Composants
-Ventirad pour processeur;Ventilateur CPU avec dissipateur, refroidissement silencieux.;34,90;/images/Ventirad processeur.jpg;Composants
-Boitier PC ATX;Boitier moyen tour, panneau lateral vitre, 3 ventilateurs inclus.;69,90;/images/Boitier Moyen.jpg;Composants
-Alimentation PC 650W;Bloc d'alimentation modulaire 650W, certification 80+ Bronze.;64,90;https://picsum.photos/seed/produit31/400/300;Composants
-Onduleur / UPS 600VA;Onduleur pour proteger le PC des coupures de courant.;79,90;/images/Onduleur.jpg;Accessoires
-Multiprise parafoudre;Multiprise 6 prises avec protection surtension.;19,90;/images/Multiprise.jpg;Accessoires
-Hub USB-C 7 en 1;Adaptateur USB-C vers HDMI, USB 3.0, lecteur de cartes SD.;34,90;/images/Hub USB-C 8 Ports.jpg;Accessoires
-Station d'accueil laptop;Dock USB-C, double ecran, ethernet, charge rapide.;99,90;/images/Support Ordinateur.jpg;Accessoires
-Cable HDMI 2m;Cable HDMI haute vitesse, compatible 4K 60Hz.;8,90;/images/Cable 2m.jpg;Accessoires
-Cable USB-C vers USB-C 1m;Cable de charge et transfert de donnees rapide.;7,90;/images/Cable de charge 1m.jpg;Accessoires
-Chargeur USB-C 65W;Chargeur rapide USB-C, compatible laptop et smartphone.;24,90;https://picsum.photos/seed/produit38/400/300;Accessoires
-Support laptop ergonomique;Support en aluminium, ajustable, ameliore la ventilation.;29,90;https://picsum.photos/seed/produit39/400/300;Accessoires
-Support double ecran;Bras articule pour deux moniteurs, fixation sur bureau.;54,90;https://picsum.photos/seed/produit40/400/300;Accessoires
-Tablette graphique;Tablette graphique avec stylet, ideale pour le dessin numerique.;89,90;https://picsum.photos/seed/produit41/400/300;Accessoires
-Imprimante multifonction;Imprimante jet d'encre, scanner et copieur integres, wifi.;119,90;https://picsum.photos/seed/produit42/400/300;Bureautique
-Scanner de documents portable;Scanner compact USB, numerisation rapide recto-verso.;89,90;https://picsum.photos/seed/produit43/400/300;Bureautique
-Routeur wifi 6;Routeur wifi 6 haut debit, couverture grande maison.;129,90;https://picsum.photos/seed/produit44/400/300;Reseau
-Repeteur wifi;Repeteur wifi pour etendre la couverture reseau.;29,90;https://picsum.photos/seed/produit45/400/300;Reseau
-Adaptateur wifi USB;Cle USB wifi pour PC de bureau, double bande.;19,90;https://picsum.photos/seed/produit46/400/300;Reseau
-Cle USB bluetooth;Adaptateur bluetooth USB pour PC sans bluetooth integre.;9,90;https://picsum.photos/seed/produit47/400/300;Reseau
-Casque VR;Casque de realite virtuelle, ecran haute resolution.;349,90;https://picsum.photos/seed/produit48/400/300;Gaming & VR
-Manette de jeu USB;Manette filaire compatible PC, boutons programmables.;24,90;https://picsum.photos/seed/produit49/400/300;Gaming & VR
-Chaise de bureau gamer;Chaise ergonomique, accoudoirs reglables, soutien lombaire.;179,90;https://picsum.photos/seed/produit50/400/300;Gaming & VR
-Bureau assis-debout electrique;Bureau reglable en hauteur, moteur electrique silencieux.;349,90;https://picsum.photos/seed/produit51/400/300;Bureautique
-Lampe de bureau LED;Lampe LED avec variateur, ideale pour poste de travail.;24,90;https://picsum.photos/seed/produit52/400/300;Bureautique
-Antivirus 1 an - 3 postes;Licence antivirus, protection 3 ordinateurs, 1 an.;39,90;https://picsum.photos/seed/produit53/400/300;Logiciels
+PC de bureau ShopLite Tower;Unite centrale, Intel Core i5, 16 Go RAM, SSD 1 To, sans ecran.;649,90;https://picsum.photos/seed/produit3/400/300;Ordinateurs
+PC de bureau gamer;Tour gaming avec carte graphique dediee et refroidissement renforce.;1199,00;https://picsum.photos/seed/produit4/400/300;Ordinateurs
+Mini PC barebone;Petit boitier compact Intel N100, sans ecran ni clavier.;249,90;https://picsum.photos/seed/produit5/400/300;Ordinateurs
+Chromebook 14 pouces;Ordinateur portable leger sous ChromeOS, ideal bureautique.;299,90;https://picsum.photos/seed/produit6/400/300;Ordinateurs
+Station de travail professionnelle;Tour puissante pour montage video et modelisation 3D.;1899,00;https://picsum.photos/seed/produit7/400/300;Ordinateurs
+Tablette PC 2 en 1;Tablette tactile avec clavier detachable et stylet.;499,90;https://picsum.photos/seed/produit8/400/300;Ordinateurs
+Ecran 24 pouces Full HD;Moniteur 24'', 1920x1080, dalle IPS, 75Hz.;129,90;https://picsum.photos/seed/produit9/400/300;Ecrans
+Ecran 27 pouces 4K;Moniteur 27'', UHD 4K, dalle IPS, compatible HDR.;289,90;https://picsum.photos/seed/produit10/400/300;Ecrans
+Ecran incurve 34 pouces;Moniteur ultra-wide incurve, ideal multitache et gaming.;449,90;https://picsum.photos/seed/produit11/400/300;Ecrans
+Ecran gaming 144Hz;Moniteur 24'' Full HD, 144Hz, temps de reponse 1ms.;219,90;https://picsum.photos/seed/produit12/400/300;Ecrans
+Ecran portable USB-C;Ecran 15 pouces nomade, alimente par USB-C.;169,90;https://picsum.photos/seed/produit13/400/300;Ecrans
+Support double ecran;Bras articule pour deux moniteurs, fixation sur bureau.;54,90;https://picsum.photos/seed/produit14/400/300;Ecrans
+Filtre de confidentialite ecran;Film anti-regard pour ecran 24 pouces.;24,90;https://picsum.photos/seed/produit15/400/300;Ecrans
+Adaptateur DisplayPort vers HDMI;Convertisseur pour connecter un ecran HDMI a une sortie DisplayPort.;14,90;https://picsum.photos/seed/produit16/400/300;Ecrans
+Clavier mecanique RGB;Clavier retroeclaire, switches bleus, filaire.;74,90;https://picsum.photos/seed/produit17/400/300;Peripheriques
+Clavier sans fil silencieux;Clavier compact, connexion bluetooth, switches silencieux.;39,90;https://picsum.photos/seed/produit18/400/300;Peripheriques
+Souris optique filaire;Souris ergonomique 3 boutons, capteur optique 1600 DPI.;12,90;https://picsum.photos/seed/produit19/400/300;Peripheriques
+Souris gamer RGB;Souris gaming 12000 DPI, 7 boutons programmables.;44,90;https://picsum.photos/seed/produit20/400/300;Peripheriques
+Webcam Full HD 1080p;Webcam USB 1080p, micro integre, autofocus.;34,90;https://picsum.photos/seed/produit21/400/300;Peripheriques
+Casque sans fil reduction de bruit;Casque bluetooth, reduction de bruit active, autonomie 20h.;89,90;https://picsum.photos/seed/produit22/400/300;Peripheriques
+Microphone USB studio;Microphone a condensateur, ideal streaming et podcasts.;79,90;https://picsum.photos/seed/produit23/400/300;Peripheriques
+Enceintes PC 2.0;Paire d'enceintes compactes pour ordinateur, USB/jack.;22,90;https://picsum.photos/seed/produit24/400/300;Peripheriques
+SSD interne 500 Go;Disque SSD SATA 500 Go, vitesses de lecture jusqu'a 550 Mo/s.;44,90;https://picsum.photos/seed/produit25/400/300;Stockage
+SSD interne 1 To NVMe;SSD NVMe M.2 1 To, tres haute vitesse pour PC et laptop.;84,90;https://picsum.photos/seed/produit26/400/300;Stockage
+Disque dur externe 2 To;Disque dur externe USB 3.0, 2 To, compact et portable.;69,90;https://picsum.photos/seed/produit27/400/300;Stockage
+Disque dur interne 3.5 pouces 4 To;Disque dur mecanique haute capacite pour stockage de masse.;89,90;https://picsum.photos/seed/produit28/400/300;Stockage
+Cle USB 64 Go;Cle USB 3.0, 64 Go, format compact.;9,90;https://picsum.photos/seed/produit29/400/300;Stockage
+Cle USB 128 Go;Cle USB 3.1, 128 Go, transfert rapide.;16,90;https://picsum.photos/seed/produit30/400/300;Stockage
+NAS 2 baies;Serveur de stockage reseau pour sauvegarde et partage de fichiers.;199,90;https://picsum.photos/seed/produit31/400/300;Stockage
+Lecteur de carte SD externe;Lecteur USB-C multi-formats pour cartes memoire.;16,90;https://picsum.photos/seed/produit32/400/300;Stockage
+Barrette RAM 8 Go DDR4;Memoire RAM DDR4 8 Go, frequence 3200 MHz.;27,90;https://picsum.photos/seed/produit33/400/300;Composants
+Barrette RAM 16 Go DDR4;Memoire RAM DDR4 16 Go, frequence 3200 MHz.;49,90;https://picsum.photos/seed/produit34/400/300;Composants
+Carte graphique milieu de gamme;GPU 8 Go GDDR6, ideal gaming Full HD/1440p.;349,90;https://picsum.photos/seed/produit35/400/300;Composants
+Ventirad pour processeur;Ventilateur CPU avec dissipateur, refroidissement silencieux.;34,90;https://picsum.photos/seed/produit36/400/300;Composants
+Boitier PC ATX;Boitier moyen tour, panneau lateral vitre, 3 ventilateurs inclus.;69,90;https://picsum.photos/seed/produit37/400/300;Composants
+Alimentation PC 650W;Bloc d'alimentation modulaire 650W, certification 80+ Bronze.;64,90;https://picsum.photos/seed/produit38/400/300;Composants
+Carte mere ATX;Carte mere compatible derniere generation, supporte DDR5.;149,90;https://picsum.photos/seed/produit39/400/300;Composants
+Kit watercooling AIO;Refroidissement liquide CPU 240mm avec ventilateurs RGB.;89,90;https://picsum.photos/seed/produit40/400/300;Composants
+Routeur wifi 6;Routeur wifi 6 haut debit, couverture grande maison.;129,90;https://picsum.photos/seed/produit41/400/300;Reseau
+Repeteur wifi;Repeteur wifi pour etendre la couverture reseau.;29,90;https://picsum.photos/seed/produit42/400/300;Reseau
+Adaptateur wifi USB;Cle USB wifi pour PC de bureau, double bande.;19,90;https://picsum.photos/seed/produit43/400/300;Reseau
+Switch reseau 8 ports;Commutateur Ethernet Gigabit 8 ports.;24,90;https://picsum.photos/seed/produit44/400/300;Reseau
+Cable Ethernet 5m;Cable RJ45 categorie 6, 5 metres.;6,90;https://picsum.photos/seed/produit45/400/300;Reseau
+Mesh wifi 3 pack;Systeme wifi maille pour couvrir toute la maison.;179,90;https://picsum.photos/seed/produit46/400/300;Reseau
+Camera de surveillance IP;Camera connectee wifi avec vision nocturne.;54,90;https://picsum.photos/seed/produit47/400/300;Reseau
+Switch PoE 8 ports;Commutateur reseau alimentant des cameras et bornes wifi.;69,90;https://picsum.photos/seed/produit48/400/300;Reseau
+Chargeur USB-C 65W;Chargeur rapide compatible laptop et smartphone.;29,90;https://picsum.photos/seed/produit49/400/300;Accessoires
+Cable HDMI 2m;Cable HDMI haute vitesse, compatible 4K 60Hz.;8,90;https://picsum.photos/seed/produit50/400/300;Accessoires
+Cable USB-C vers USB-C 1m;Cable de charge et transfert de donnees rapide.;9,90;https://picsum.photos/seed/produit51/400/300;Accessoires
+Support laptop ergonomique;Support en aluminium, ajustable, ameliore la ventilation.;29,90;https://picsum.photos/seed/produit52/400/300;Accessoires
+Station d'accueil laptop;Dock USB-C, double ecran, ethernet, charge rapide.;99,90;https://picsum.photos/seed/produit53/400/300;Accessoires
+Hub USB-C 7 en 1;Adaptateur USB-C vers HDMI, USB 3.0, lecteur de cartes SD.;34,90;https://picsum.photos/seed/produit54/400/300;Accessoires
+Onduleur / UPS 600VA;Onduleur pour proteger le PC des coupures de courant.;79,90;https://picsum.photos/seed/produit55/400/300;Accessoires
+Repose-poignet clavier et souris;Support en gel pour reduire la fatigue du poignet.;12,90;https://picsum.photos/seed/produit56/400/300;Accessoires
+Casque VR;Casque de realite virtuelle, ecran haute resolution.;349,90;https://picsum.photos/seed/produit57/400/300;Gaming
+Manette de jeu USB;Manette filaire compatible PC, boutons programmables.;24,90;https://picsum.photos/seed/produit58/400/300;Gaming
+Chaise de bureau gamer;Chaise ergonomique, accoudoirs reglables, soutien lombaire.;179,90;https://picsum.photos/seed/produit59/400/300;Gaming
+Tapis de souris XXL gaming;Tapis de souris grand format, surface anti-derapante.;14,90;https://picsum.photos/seed/produit60/400/300;Gaming
+Casque gamer surround;Casque gaming son surround 7.1, micro amovible.;59,90;https://picsum.photos/seed/produit61/400/300;Gaming
+Carte d'acquisition video;Capture card pour streaming et enregistrement de gameplay.;99,90;https://picsum.photos/seed/produit62/400/300;Gaming
+Stream deck;Console de controle avec touches programmables pour le streaming.;119,90;https://picsum.photos/seed/produit63/400/300;Gaming
+Fond vert pliable;Toile de fond pour incrustation video en streaming.;44,90;https://picsum.photos/seed/produit64/400/300;Gaming

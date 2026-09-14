@@ -55,4 +55,12 @@ export class CataloguePage implements OnInit {
     this.messageAjout.set(`${produit.name} ajoute au panier !`);
     setTimeout(() => this.messageAjout.set(''), 2000);
   }
+
+  categorieSelectionnee = '';
+
+produitsFiltres() {
+  return this.produits().filter(p =>
+    p.name.toLowerCase().includes(this.recherche().toLowerCase())
+  );
+}
 }

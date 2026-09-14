@@ -13,6 +13,32 @@
       class="champ-recherche"
     />
 
+    <div class="filtres">
+  <input
+    type="text"
+    placeholder="Rechercher un produit..."
+    [(ngModel)]="recherche"
+  />
+
+  <select [(ngModel)]="categorieSelectionnee">
+    <option value="">Toutes les catégories</option>
+    <option value="Ordinateurs">Ordinateurs</option>
+    <option value="Ecrans">Écrans</option>
+    <option value="Peripheriques">Périphériques</option>
+    <option value="Stockage">Stockage</option>
+    <option value="Composants">Composants</option>
+    <option value="Reseau">Réseau</option>
+    <option value="Accessoires">Accessoires</option>
+    <option value="Gaming">Gaming</option>
+  </select>
+
+  <select [(ngModel)]="tri">
+    <option value="nom-asc">Nom (A-Z)</option>
+    <option value="prix-asc">Prix croissant</option>
+    <option value="prix-desc">Prix décroissant</option>
+  </select>
+</div>
+
     <select [(ngModel)]="tri" class="champ-tri">
       <option value="nom-asc">Nom (A-Z)</option>
       <option value="nom-desc">Nom (Z-A)</option>
