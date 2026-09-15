@@ -1,4 +1,4 @@
-import { Service, signal, computed } from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
 
 export interface ArticlePanier {
   productId: number;
@@ -7,10 +7,13 @@ export interface ArticlePanier {
   quantity: number;
 }
 
-@Service()
+@Injectable({ providedIn: 'root' })
 export class Panier {
   articles = signal<ArticlePanier[]>(this.chargerPanier());
-total = computed(() => {
+
+  animationBadge = signal(false);
+
+  total = computed(() => {
     const somme = this.articles().reduce((s, a) => s + a.price * a.quantity, 0);
     return Math.round(somme * 100) / 100;
   });
@@ -45,6 +48,9 @@ total = computed(() => {
       ]);
     }
     this.sauvegarder();
+
+    this.animationBadge.set(true);
+    setTimeout(() => this.animationBadge.set(false), 300);
   }
 
   changerQuantite(productId: number, quantite: number): void {

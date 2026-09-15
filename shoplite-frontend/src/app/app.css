@@ -53,3 +53,17 @@ nav a.lien-actif {
 main {
   min-height: 80vh;
 }
+
+.badge-panier {
+  transition: transform 0.2s ease;
+}
+
+.badge-panier.anime {
+  animation: pulse 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}

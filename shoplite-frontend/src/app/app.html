@@ -5,7 +5,7 @@
     <a routerLink="/panier" routerLinkActive="lien-actif" class="lien-panier">
       Panier
       @if (panierService.nombreArticles() > 0) {
-        <span class="badge-panier">{{ panierService.nombreArticles() }}</span>
+        <span class="badge-panier" [class.anime]="panierService.animationBadge()">{{ panierService.nombreArticles() }}</span>
       }
     </a>
     <a routerLink="/connexion" routerLinkActive="lien-actif">Connexion</a>

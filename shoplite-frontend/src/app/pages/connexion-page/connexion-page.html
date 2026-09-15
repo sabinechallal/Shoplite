@@ -32,4 +32,12 @@
       Pas de compte ? <a routerLink="/inscription">S'inscrire</a>
     </p>
   </div>
+
+  <div
+  class="produit-carte"
+  *ngFor="let p of produitsFiltres(); let i = index"
+  [style.animation-delay.ms]="i * 40"
+>
+  <!-- contenu existant de ta carte -->
+</div>
 </div>
