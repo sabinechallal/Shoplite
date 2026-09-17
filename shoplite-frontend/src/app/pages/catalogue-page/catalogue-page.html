@@ -37,7 +37,7 @@
   <div class="grille-produits">
     @for (produit of produitsAffiches(); track produit.id; let i = $index) {
       <div class="carte-produit" [style.animation-delay.ms]="i * 40">
-        <div class="image-produit">💻</div>
+      <img [src]="produit.imageUrl" [alt]="produit.name" class="image-produit" />
         <h2>{{ produit.name }}</h2>
         <p>{{ produit.description }}</p>
         <p class="prix">{{ produit.price }} €</p>
