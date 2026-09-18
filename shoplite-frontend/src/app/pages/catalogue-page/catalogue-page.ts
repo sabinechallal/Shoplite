@@ -1,3 +1,4 @@
+
 import { Component, OnInit, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Catalogue, Produit } from '../../services/catalogue';
@@ -14,13 +15,30 @@ export class CataloguePage implements OnInit {
   recherche = signal('');
   tri = signal('nom-asc');
   messageAjout = signal('');
+  categorieSelectionnee = signal('');
+
+  categories = [
+    { valeur: 'Ordinateurs', libelle: 'Ordinateurs' },
+    { valeur: 'Ecrans', libelle: 'Écrans' },
+    { valeur: 'Peripheriques', libelle: 'Périphériques' },
+    { valeur: 'Stockage', libelle: 'Stockage' },
+    { valeur: 'Composants', libelle: 'Composants' },
+    { valeur: 'Reseau', libelle: 'Réseau' },
+    { valeur: 'Accessoires', libelle: 'Accessoires' },
+    { valeur: 'Gaming', libelle: 'Gaming' },
+  ];
 
   produitsAffiches = computed(() => {
     const texte = this.recherche().trim().toLowerCase();
+    const categorie = this.categorieSelectionnee();
     let liste = this.produits();
 
     if (texte) {
       liste = liste.filter((p) => p.name.toLowerCase().includes(texte));
+    }
+
+    if (categorie) {
+      liste = liste.filter((p) => p.category === categorie);
     }
 
     liste = [...liste];
@@ -56,11 +74,7 @@ export class CataloguePage implements OnInit {
     setTimeout(() => this.messageAjout.set(''), 2000);
   }
 
-  categorieSelectionnee = '';
-
-produitsFiltres() {
-  return this.produits().filter(p =>
-    p.name.toLowerCase().includes(this.recherche().toLowerCase())
-  );
-}
+  selectionnerCategorie(categorie: string): void {
+    this.categorieSelectionnee.set(categorie);
+  }
 }

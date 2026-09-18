@@ -1,3 +1,4 @@
+
 package com.shoplite.catalogue.config;
 
 import com.shoplite.catalogue.model.Product;
@@ -13,12 +14,6 @@ import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 
-/**
- * Au demarrage de l'application, si le catalogue est vide, on charge les
- * produits depuis le fichier src/main/resources/data/produits.csv.
- * Identique a l'ancien DataLoader du monolithe : cette responsabilite
- * "peupler la base produits" appartient desormais uniquement a ce service.
- */
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -53,7 +48,7 @@ public class DataLoader implements CommandLineRunner {
                 }
 
                 String[] colonnes = ligne.split(";", -1);
-                if (colonnes.length < 4) {
+                if (colonnes.length < 5) {
                     System.out.println("[Catalogue] Ligne CSV ignoree (format invalide) : " + ligne);
                     continue;
                 }
@@ -62,10 +57,11 @@ public class DataLoader implements CommandLineRunner {
                 String description = colonnes[1].trim();
                 String prixTexte = colonnes[2].trim().replace(",", ".");
                 String photo = colonnes[3].trim();
+                String categorie = colonnes[4].trim();
 
                 try {
                     BigDecimal prix = new BigDecimal(prixTexte);
-                    productRepository.save(new Product(nom, description, prix, photo));
+                    productRepository.save(new Product(nom, description, prix, photo, categorie));
                     nombreCharges++;
                 } catch (NumberFormatException e) {
                     System.out.println("[Catalogue] Ligne CSV ignoree (prix invalide '" + prixTexte + "') : " + ligne);

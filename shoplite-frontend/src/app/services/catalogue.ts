@@ -1,9 +1,7 @@
+
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-  providedIn: 'root'
-
 
 export interface Produit {
   id: number;
@@ -11,12 +9,12 @@ export interface Produit {
   description: string;
   price: number;
   imageUrl: string;
+  category: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
-
 export class Catalogue {
   private readonly apiUrl = 'http://localhost:8081/api/produits';
   private http = inject(HttpClient);

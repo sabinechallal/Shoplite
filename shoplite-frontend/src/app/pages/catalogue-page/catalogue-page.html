@@ -1,4 +1,4 @@
-
+@'
 <div class="catalogue">
   <h1>Nos produits</h1>
 
@@ -7,31 +7,44 @@
   }
 
   <div class="barre-outils">
-    <input
-      type="text"
-      placeholder="Rechercher un produit..."
-      [(ngModel)]="recherche"
-      class="champ-recherche"
-    />
+    <div class="ligne-recherche">
+      <div class="champ-recherche-wrapper">
+        <svg class="icone-recherche" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+          <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input
+          type="text"
+          placeholder="Rechercher un produit..."
+          [(ngModel)]="recherche"
+          class="champ-recherche"
+        />
+      </div>
 
-    <select [(ngModel)]="categorieSelectionnee" class="champ-categorie">
-      <option value="">Toutes les catégories</option>
-      <option value="Ordinateurs">Ordinateurs</option>
-      <option value="Ecrans">Écrans</option>
-      <option value="Peripheriques">Périphériques</option>
-      <option value="Stockage">Stockage</option>
-      <option value="Composants">Composants</option>
-      <option value="Reseau">Réseau</option>
-      <option value="Accessoires">Accessoires</option>
-      <option value="Gaming">Gaming</option>
-    </select>
+      <select [(ngModel)]="tri" class="champ-tri">
+        <option value="nom-asc">Nom (A-Z)</option>
+        <option value="nom-desc">Nom (Z-A)</option>
+        <option value="prix-asc">Prix croissant</option>
+        <option value="prix-desc">Prix decroissant</option>
+      </select>
+    </div>
 
-    <select [(ngModel)]="tri" class="champ-tri">
-      <option value="nom-asc">Nom (A-Z)</option>
-      <option value="nom-desc">Nom (Z-A)</option>
-      <option value="prix-asc">Prix croissant</option>
-      <option value="prix-desc">Prix decroissant</option>
-    </select>
+    <div class="filtres-categories">
+      <button
+        type="button"
+        class="pastille-categorie"
+        [class.active]="categorieSelectionnee() === ''"
+        (click)="selectionnerCategorie('')"
+      >Toutes</button>
+      @for (cat of categories; track cat.valeur) {
+        <button
+          type="button"
+          class="pastille-categorie"
+          [class.active]="categorieSelectionnee() === cat.valeur"
+          (click)="selectionnerCategorie(cat.valeur)"
+        >{{ cat.libelle }}</button>
+      }
+    </div>
   </div>
 
   <div class="grille-produits">
@@ -50,3 +63,4 @@
     }
   </div>
 </div>
+'@ | Set-Content -Path "shoplite-frontend\src\app\pages\catalogue-page\catalogue-page.html" -Encoding utf8

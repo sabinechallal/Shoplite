@@ -1,3 +1,4 @@
+
 package com.shoplite.catalogue.model;
 
 import jakarta.persistence.Entity;
@@ -7,11 +8,6 @@ import jakarta.persistence.Id;
 
 import java.math.BigDecimal;
 
-/**
- * Un produit du catalogue ShopLite : nom, description, prix et une photo (URL de l'image).
- * Classe identique a l'ancienne version du monolithe : le microservice Catalogue
- * est desormais le SEUL endroit ou cette classe existe et ou la table PRODUCT vit.
- */
 @Entity
 public class Product {
 
@@ -27,15 +23,17 @@ public class Product {
 
     private String imageUrl;
 
+    private String category;
+
     public Product() {
-        // constructeur vide requis par JPA
     }
 
-    public Product(String name, String description, BigDecimal price, String imageUrl) {
+    public Product(String name, String description, BigDecimal price, String imageUrl, String category) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.imageUrl = imageUrl;
+        this.category = category;
     }
 
     public Long getId() {
@@ -76,5 +74,13 @@ public class Product {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
