@@ -166,3 +166,5 @@ initialiserBase().then(() => {
     console.log(`[Paiement] Service demarre sur http://localhost:${PORT}`);
   });
 });
+
+// test ci
