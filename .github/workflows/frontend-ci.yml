@@ -1,0 +1,27 @@
+﻿name: CI Frontend
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "shoplite-frontend/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Installer les dependances
+        working-directory: ./shoplite-frontend
+        run: npm install
+
+      - name: Compiler le projet Angular
+        working-directory: ./shoplite-frontend
+        run: npm run build
