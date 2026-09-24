@@ -1,85 +1,28 @@
-.inscription-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+.checklist-mot-de-passe {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 12px 0;
+  font-size: 13px;
 }
 
-.carte-inscription {
-  background: white;
-  border-radius: 12px;
-  padding: 2.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 360px;
+.checklist-mot-de-passe li {
+  padding: 2px 0;
+  color: #999;
 }
 
-.carte-inscription h1 {
-  text-align: center;
-  color: #1a1a2e;
-  margin-bottom: 1.5rem;
-}
-
-.carte-inscription form {
-  display: flex;
-  flex-direction: column;
-}
-
-.carte-inscription label {
-  font-size: 0.85rem;
-  color: #444;
-  margin-bottom: 0.3rem;
-  margin-top: 1rem;
-}
-
-.carte-inscription input {
-  padding: 0.6rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 1rem;
-}
-
-.carte-inscription input:focus {
-  outline: none;
-  border-color: #764ba2;
-}
-
-.message-erreur {
+.checklist-mot-de-passe li.invalide {
   color: #d32f2f;
-  font-size: 0.85rem;
-  margin-top: 0.8rem;
 }
 
-.carte-inscription button {
-  margin-top: 1.5rem;
-  padding: 0.7rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
+.checklist-mot-de-passe li.valide {
+  color: #2e7d32;
+  font-weight: 600;
 }
 
-.carte-inscription button:hover {
-  opacity: 0.9;
+.checklist-mot-de-passe li.valide::before {
+  content: "✓ ";
 }
 
-.lien-connexion {
-  text-align: center;
-  margin-top: 1.2rem;
-  font-size: 0.85rem;
-  color: #666;
-}
-
-.lien-connexion a {
-  color: #764ba2;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.lien-connexion a:hover {
-  text-decoration: underline;
+.checklist-mot-de-passe li.invalide::before {
+  content: "✗ ";
 }

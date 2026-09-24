@@ -1,4 +1,3 @@
-
 <div class="inscription-container">
   <div class="carte-inscription">
     <h1>Creer un compte</h1>
@@ -31,11 +30,33 @@
         required
       />
 
+      @if (password()) {
+        <ul class="checklist-mot-de-passe">
+          <li [class.valide]="longueurValide()" [class.invalide]="!longueurValide()">
+            Au moins 12 caracteres
+          </li>
+          <li [class.valide]="majusculeValide()" [class.invalide]="!majusculeValide()">
+            Une majuscule
+          </li>
+          <li [class.valide]="minusculeValide()" [class.invalide]="!minusculeValide()">
+            Une minuscule
+          </li>
+          <li [class.valide]="chiffreValide()" [class.invalide]="!chiffreValide()">
+            Un chiffre
+          </li>
+          <li [class.valide]="caractereSpecialValide()" [class.invalide]="!caractereSpecialValide()">
+            Un caractere special (! @ # $ ...)
+          </li>
+        </ul>
+      }
+
       @if (erreur()) {
         <p class="message-erreur">{{ erreur() }}</p>
       }
 
-      <button type="submit">S'inscrire</button>
+      <button type="submit" [disabled]="password().length > 0 && !motDePasseValide()">
+        S'inscrire
+      </button>
     </form>
 
     <p class="lien-connexion">

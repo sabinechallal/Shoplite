@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { Auth } from '../../services/auth';
@@ -14,6 +14,23 @@ export class InscriptionPage {
   email = signal('');
   password = signal('');
   erreur = signal('');
+
+  longueurValide = computed(() => this.password().length >= 12);
+  majusculeValide = computed(() => /[A-Z]/.test(this.password()));
+  minusculeValide = computed(() => /[a-z]/.test(this.password()));
+  chiffreValide = computed(() => /[0-9]/.test(this.password()));
+  caractereSpecialValide = computed(() =>
+    /[!@#$%^&*(),.?":{}|<>_\-+=~`[\];']/.test(this.password())
+  );
+
+  motDePasseValide = computed(
+    () =>
+      this.longueurValide() &&
+      this.majusculeValide() &&
+      this.minusculeValide() &&
+      this.chiffreValide() &&
+      this.caractereSpecialValide()
+  );
 
   constructor(private authService: Auth, private router: Router) {}
 
@@ -31,8 +48,8 @@ export class InscriptionPage {
           this.router.navigate(['/connexion']);
         },
         error: (err) => {
-          if (err.status === 409 || err.status === 400) {
-            this.erreur.set("Ce nom d'utilisateur ou cet email est deja utilise.");
+          if (err.error && err.error.erreur) {
+            this.erreur.set(err.error.erreur);
           } else {
             this.erreur.set('Une erreur est survenue, reessaie.');
           }
