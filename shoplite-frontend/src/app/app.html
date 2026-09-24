@@ -8,7 +8,12 @@
         <span class="badge-panier" [class.anime]="panierService.animationBadge()">{{ panierService.nombreArticles() }}</span>
       }
     </a>
-    <a routerLink="/connexion" routerLinkActive="lien-actif">Connexion</a>
+    @if (authService.utilisateurConnecte(); as utilisateur) {
+      <span class="nom-utilisateur">👤 {{ utilisateur.username }}</span>
+      <button type="button" (click)="seDeconnecter()" class="bouton-deconnexion">Déconnexion</button>
+    } @else {
+      <a routerLink="/connexion" routerLinkActive="lien-actif">Connexion</a>
+    }
   </nav>
 </header>
 
