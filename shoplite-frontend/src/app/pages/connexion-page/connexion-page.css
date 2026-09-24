@@ -1,15 +1,31 @@
 .connexion-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 70vh;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.connexion-container::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background-image: url('https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px) brightness(0.7);
+  z-index: 0;
 }
 
 .carte-connexion {
-  background: white;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.93);
   border-radius: 12px;
   padding: 2.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 360px;
 }
