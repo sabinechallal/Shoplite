@@ -121,7 +121,20 @@ services:
       - auth-service
       - commande-service
       - paiement-service
+    prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
 
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+      
 volumes:
   catalogue-db-data:
   auth-db-data:
