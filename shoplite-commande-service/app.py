@@ -17,8 +17,10 @@ from flask_cors import CORS
 from datetime import datetime
 import requests
 import os
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
+metrics = PrometheusMetrics(app)
 CORS(app, origins=["http://localhost:4200"])
 
 print("### VERSION CONNEXION 1 - CE FICHIER EST BIEN LE BON ###")
@@ -53,7 +55,6 @@ class Order(db.Model):
             "status": self.status,
             "items": [item.to_dict() for item in self.items],
         }
-       
 
 
 class OrderItem(db.Model):
@@ -192,4 +193,4 @@ def creer_commande():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-    app.run(host="0.0.0.0", port=8082, debug=True)
+    app.run(host="0.0.0.0", port=8082, debug=False)

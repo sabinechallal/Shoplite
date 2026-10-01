@@ -4,6 +4,7 @@ flask-sqlalchemy
 psycopg2-binary
 flask-cors
 requests
+prometheus-flask-exporter==0.23.1
 
 
 # test ci
