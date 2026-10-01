@@ -72,7 +72,7 @@ services:
     ports:
       - "8082:8082"
     environment:
-      DATABASE_URL: postgresql://postgres:sabine1999@commande-db:5432/commande
+      DATABASE_URL: postgresql+psycopg2://postgres:sabine1999@commande-db:5432/commande
       CATALOGUE_SERVICE_URL: http://catalogue-service:8081
       AUTH_SERVICE_URL: http://auth-service:8084
     depends_on:
