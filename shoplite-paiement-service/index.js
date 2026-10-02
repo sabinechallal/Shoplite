@@ -20,10 +20,18 @@
 const express = require("express");
 const { Pool } = require("pg");
 const cors = require("cors");
-
+const client = require("prom-client");
 const app = express();
 app.use(cors({ origin: "http://localhost:4200" }));
 app.use(express.json()); // permet de lire le JSON envoye dans les requetes
+
+// --- Metriques Prometheus ---
+client.collectDefaultMetrics();
+
+app.get("/metrics", async (req, res) => {
+  res.set("Content-Type", client.register.contentType);
+  res.end(await client.register.metrics());
+});
 
 const PORT = 8083;
 
