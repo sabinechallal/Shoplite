@@ -18,3 +18,7 @@ scrape_configs:
     metrics_path: '/actuator/prometheus'
     static_configs:
       - targets: ['catalogue-service:8081']
+
+  - job_name: 'paiement-service'
+    static_configs:
+      - targets: ['paiement-service:8083']
