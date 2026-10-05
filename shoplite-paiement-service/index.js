@@ -26,12 +26,33 @@ app.use(cors({ origin: "http://localhost:4200" }));
 app.use(express.json()); // permet de lire le JSON envoye dans les requetes
 
 // --- Metriques Prometheus ---
+
 client.collectDefaultMetrics();
+
+const dureeRequetesHttp = new client.Histogram({
+  name: "http_request_duration_seconds",
+  help: "Durée des requêtes HTTP en secondes",
+  labelNames: ["method", "route", "status_code"],
+  buckets: [0.01, 0.05, 0.1, 0.3, 0.5, 1, 2, 5],
+});
+
+app.use((req, res, next) => {
+  const finDuChrono = dureeRequetesHttp.startTimer();
+  res.on("finish", () => {
+    finDuChrono({
+      method: req.method,
+      route: req.route ? req.route.path : req.path,
+      status_code: res.statusCode,
+    });
+  });
+  next();
+});
 
 app.get("/metrics", async (req, res) => {
   res.set("Content-Type", client.register.contentType);
   res.end(await client.register.metrics());
 });
+
 
 const PORT = 8083;
 
