@@ -152,6 +152,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  animation: apparition 0.4s ease forwards;
 }
 
 .carte-produit:hover {
@@ -198,8 +200,10 @@
 .hero-fond {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed, #0891b2);
-  background-size: 200% 200%;
+  background:
+    linear-gradient(135deg, rgba(79,70,229,0.88), rgba(124,58,237,0.85), rgba(8,145,178,0.88)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  background-size: 200% 200%, cover;
   animation: hero-degrade 10s ease infinite;
   z-index: -1;
 }
