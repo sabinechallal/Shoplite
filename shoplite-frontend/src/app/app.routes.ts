@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AccueilPage } from './pages/accueil-page/accueil-page';
 import { CataloguePage } from './pages/catalogue-page/catalogue-page';
 import { ConnexionPage } from './pages/connexion-page/connexion-page';
 import { InscriptionPage } from './pages/inscription-page/inscription-page';
@@ -6,7 +7,7 @@ import { PanierPage } from './pages/panier-page/panier-page';
 import { PaiementPage } from './pages/paiement-page/paiement-page';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'catalogue', pathMatch: 'full' },
+   { path: '', component: AccueilPage, pathMatch: 'full' },
   { path: 'catalogue', component: CataloguePage },
   { path: 'connexion', component: ConnexionPage },
   { path: 'inscription', component: InscriptionPage },

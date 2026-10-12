@@ -1,0 +1,108 @@
+.accueil-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 24px 80px;
+  text-align: center;
+  color: white;
+}
+
+.accueil-fond {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed, #0891b2);
+  background-size: 200% 200%;
+  animation: accueil-degrade 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes accueil-degrade {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.accueil-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.accueil-logo-icone {
+  font-size: 3.5rem;
+}
+
+.accueil-logo h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.accueil-sous-titre {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+}
+
+.accueil-bouton {
+  display: inline-block;
+  background: white;
+  color: #4f46e5;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accueil-bouton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.accueil-galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.accueil-image-carte {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.accueil-image-carte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+}
+
+.accueil-image-carte img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.accueil-image-carte span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+  color: white;
+  font-weight: 700;
+  padding: 1.5rem 1rem 0.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accueil-fond { animation: none; }
+}

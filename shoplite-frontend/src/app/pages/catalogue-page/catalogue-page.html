@@ -1,11 +1,3 @@
-<section class="hero">
-  <div class="hero-fond"></div>
-  <span class="hero-eyebrow">ShopLite Informatique</span>
-  <h1 class="hero-titre">Le matériel qui propulse vos projets</h1>
-  <p class="hero-sous-titre">Ordinateurs, écrans, périphériques et composants sélectionnés pour les makers, les gamers et les pros.</p>
-  <a href="#grille-produits" class="hero-bouton">Découvrir les produits</a>
-</section>
-
 <div class="catalogue">
   <h1>Nos produits</h1>
 
@@ -54,7 +46,7 @@
     </div>
   </div>
 
-  <div class="grille-produits" id="grille-produits">
+  <div class="grille-produits">
     @for (produit of produitsAffiches(); track produit.id; let i = $index) {
       <div class="carte-produit" [style.animation-delay.ms]="i * 40">
       <img [src]="produit.imageUrl" [alt]="produit.name" class="image-produit" />
