@@ -1,3 +1,5 @@
+
+import { environment } from '../../environments/environments';
 import { Service, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -21,7 +23,7 @@ export interface DonneesInscription {
 
 @Service()
 export class Auth {
-  private readonly apiUrl = 'http://localhost:8084/api/utilisateurs';
+  private readonly apiUrl = `${environment.apiBaseUrl}/api/utilisateurs`;
   private http = inject(HttpClient);
 
   utilisateurConnecte = signal<Utilisateur | null>(this.chargerUtilisateur());

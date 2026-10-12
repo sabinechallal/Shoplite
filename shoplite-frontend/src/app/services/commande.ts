@@ -1,3 +1,4 @@
+import { environment } from '../../environments/environments';
 import { Service, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -21,7 +22,7 @@ export interface CommandeCreee {
 
 @Service()
 export class Commande {
-  private readonly apiUrl = 'http://localhost:8082/api/commandes';
+  private readonly apiUrl = `${environment.apiBaseUrl}/api/commandes`;
   private http = inject(HttpClient);
 
   creerCommande(nouvelle: NouvelleCommande): Observable<CommandeCreee> {

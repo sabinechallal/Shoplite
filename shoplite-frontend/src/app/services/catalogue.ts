@@ -1,4 +1,4 @@
-
+import { environment } from '../../environments/environments';
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -16,7 +16,7 @@ export interface Produit {
   providedIn: 'root'
 })
 export class Catalogue {
-  private readonly apiUrl = 'http://localhost:8081/api/produits';
+  private readonly apiUrl = `${environment.apiBaseUrl}/api/produits`;
   private http = inject(HttpClient);
 
   getProduits(): Observable<Produit[]> {
