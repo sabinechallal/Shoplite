@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { Panier } from './services/panier';
 import { Auth } from './services/auth';
 
@@ -11,12 +12,20 @@ import { Auth } from './services/auth';
 })
 export class App {
   protected readonly title = signal('shoplite-frontend');
+  protected readonly estPageAccueil = signal(false);
 
   constructor(
     public panierService: Panier,
     public authService: Auth,
     private router: Router
-  ) {}
+  ) {
+    this.estPageAccueil.set(this.router.url === '/');
+    this.router.events
+      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd))
+      .subscribe((event) => {
+        this.estPageAccueil.set(event.urlAfterRedirects === '/');
+      });
+  }
 
   seDeconnecter(): void {
     this.authService.deconnexion();
