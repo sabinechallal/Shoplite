@@ -22,7 +22,7 @@ export interface CommandeCreee {
 
 @Service()
 export class Commande {
-  private readonly apiUrl = `${environment.apiBaseUrl}/api/commandes`;
+  private readonly apiUrl = `${environment.apiBaseUrl}/commande/commandes`;
   private http = inject(HttpClient);
 
   creerCommande(nouvelle: NouvelleCommande): Observable<CommandeCreee> {

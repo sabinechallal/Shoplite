@@ -16,7 +16,7 @@ export interface Produit {
   providedIn: 'root'
 })
 export class Catalogue {
-  private readonly apiUrl = `${environment.apiBaseUrl}/api/produits`;
+  private readonly apiUrl = `${environment.apiBaseUrl}/catalogue/produits`;
   private http = inject(HttpClient);
 
   getProduits(): Observable<Produit[]> {

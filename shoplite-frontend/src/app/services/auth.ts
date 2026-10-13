@@ -23,7 +23,7 @@ export interface DonneesInscription {
 
 @Service()
 export class Auth {
-  private readonly apiUrl = `${environment.apiBaseUrl}/api/utilisateurs`;
+  private readonly apiUrl = `${environment.apiBaseUrl}/auth/utilisateurs`;
   private http = inject(HttpClient);
 
   utilisateurConnecte = signal<Utilisateur | null>(this.chargerUtilisateur());

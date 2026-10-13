@@ -22,7 +22,7 @@ export interface PaiementConfirme {
 
 @Service()
 export class Paiement {
-  private readonly apiUrl = `${environment.apiBaseUrl}/api/paiements`;
+  private readonly apiUrl = `${environment.apiBaseUrl}/paiement/paiements`;
   private http = inject(HttpClient);
 
   payer(donnees: DonneesPaiement): Observable<PaiementConfirme> {
